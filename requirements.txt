@@ -1,0 +1,12 @@
+langchain
+langchain-core
+numpy
+scikit-learn
+langchain-openai
+openai
+langchain-google-genai
+google-genai
+langchain-huggingface
+transformers
+huggingface-hub
+python-dotenv
