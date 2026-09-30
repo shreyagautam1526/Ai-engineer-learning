@@ -2,8 +2,7 @@ from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_core.runnables import RunnableParallel,RunnableBranch
-
+from langchain_core.runnables import RunnableBranch
 load_dotenv()
 
 # --------------------------------
@@ -42,7 +41,7 @@ refund_prompt = PromptTemplate(
     Customer problem:{message}
     Give helpful response for this refund-related issue.
     """,
-    input_variables=["topic"]
+    input_variables=["message"]
 )
 refund_chain = refund_prompt | model | parser
 

@@ -2,9 +2,7 @@ from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_core.runnables import RunnableParallel,RunnableBranch
-from langchain_core.output_parsers import PydanticOutputParser
-from pydantic import Field, BaseModel
+from langchain_core.runnables import RunnableBranch
 
 load_dotenv()
 
@@ -34,7 +32,7 @@ intermediate_chain = intermediate_prompt | model | parser
 
 advanced_prompt = PromptTemplate(
     template = "" \
-    "Explain the {topic} in deeply with implementation details.",
+    "Explain the {topic} in depth with implementation details.",
     input_variables=["topic"]
 )
 advanced_chain = advanced_prompt | model | parser
