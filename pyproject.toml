@@ -10,6 +10,7 @@ requires-python = ">=3.12"
 dependencies = [
     "accelerate>=1.15.0",
     "google-genai>=2.22.0",
+    "grandalf>=0.8",
     "huggingface-hub>=1.30.0",
     "langchain>=1.4.0",
     "langchain-classic>=1.0.8",
